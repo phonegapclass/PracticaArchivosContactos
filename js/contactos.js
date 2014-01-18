@@ -20,11 +20,11 @@ function LeerContactos(){
 function Contactos() {
 	//alert('1');
 	// find all contacts with 'Bob' in any name field
-	/*var options = new ContactFindOptions();
+	var options = new ContactFindOptions();
 	options.filter = "";
-    options.mulple = true;*/
+    options.mulple = true;
 	var fields = ["*"];
-	navigator.contacts.find(fields, leidos, onError1);
+	navigator.contacts.find(fields, leidos, onError1,options);
 }
 
 // onSuccess: Get a snapshot of the current contacts
