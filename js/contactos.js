@@ -20,11 +20,11 @@ function LeerContactos(){
 function Contactos() {
 	//alert('1');
 	// find all contacts with 'Bob' in any name field
-	var options = new ContactFindOptions();
+	/*var options = new ContactFindOptions();
 	options.filter = "";
-    options.mulple = true;
+    options.mulple = true;*/
 	var fields = ["*"];
-	navigator.contacts.find(fields, leidos, onError1, options);
+	navigator.contacts.find(fields, leidos, onError1);
 }
 
 // onSuccess: Get a snapshot of the current contacts
@@ -37,7 +37,7 @@ function leidos(contacts) {
 		$('#cMostrar').html('<li>Sin Leer Contactos</li>');
 	for (var i = 0; i < contacts.length; i++) {
 		//var tel = contacts[i].phoneNumbers[0].value;
-		var nombre = contacts[i].displayname || contacts[i].nickname;
+		var nombre = "Carlos";
 		$('#cMostrar').append('<li><a href="tel:00">'+nombre+'</a></li>');
 	}
 }
